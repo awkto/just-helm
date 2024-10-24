@@ -15,5 +15,5 @@ RUN apk add --no-cache curl bash \
 RUN helm version
 
 # Default command to run Helm (can be overridden)
-ENTRYPOINT ["helm"]
+ENTRYPOINT ["/bin/sh", "-c"]
 CMD ["--help"]

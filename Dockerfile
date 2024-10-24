@@ -2,7 +2,8 @@
 FROM alpine:3.18
 
 # Set environment variables
-ENV HELM_VERSION="v3.13.0"
+ENV HELM_VERSION="v3.16.2"
+ENV HELM_EXPERIMENTAL_OCI=1
 
 # Install necessary packages, including Helm
 RUN apk add --no-cache curl bash \

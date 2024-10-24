@@ -26,9 +26,9 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          tags: your-dockerhub-username/helm:latest
+          tags: awkto/just-helm:latest
           push: true
 
       - name: Verify Helm binary inside the image
         run: |
-          docker run --rm your-dockerhub-username/helm:latest helm version
+          docker run --rm awkto/just-helm:latest helm version
